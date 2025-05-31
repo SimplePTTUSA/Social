@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBook</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b87f2ffcd2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- AUTH FORMS (Signup/Login) -->
+    <div id="auth-section">
+        <div id="signup-box">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password (min 8 chars)" minlength="8" required>
+                <input type="text" id="signup-name" placeholder="Name" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+            <p id="signup-message"></p>
+        </div>
+        <div id="login-box" style="display:none;">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign up here</a></p>
+            <p id="login-message"></p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT (hidden until logged in) -->
+    <div id="main-app" style="display:none;">
+
+        <nav>
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="images/logo.png" class="logo">
+                </a>
+                <ul>
+                    <li> <img src="images/notification.png"></li>
+                    <li> <img src="images/inbox.png"></li>
+                    <li> <img src="images/video.png"></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="search-box">
+                    <img src="images/search.png" >
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                    <img src="images/user.png">
+                </div>
+            </div>
+            <!-- ----------settings-menu---------- -->
+            <div class="settings-menu">
+                <div id="dark-btn">
+                    <span></span>
+                </div>
+                <div class="settings-menu-inner">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                           <a href="profile.html">See Your Profile</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="user-profile">
+                        <img src="images/feedback.png">
+                        <div>
+                            <p>Give Feedback</p>
+                           <a href="#">Help us to improve the new design </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="setting-links">
+                        <img src="images/setting.png" class="settings-icon">
+                        <a href="#">Settings & Privacy <img src="images/arrow.png"
+                            width="10px"></a>
+                    </div>
+                    <div class="setting-links">
+                        <img src="images/help.png" class="settings-icon">
+                        <a href="#">Help & Support <img src="images/arrow.png"
+                            width="10px"></a>
+                    </div>
+                    <div class="setting-links">
+                        <img src="images/display.png" class="settings-icon">
+                        <a href="#">Display & Accessibility <img src="images/arrow.png"
+                            width="10px"></a>
+                    </div>
+                    <div class="setting-links">
+                        <img src="images/logout.png" class="settings-icon">
+                        <a href="#" id="logout-link">LogOut <img src="images/arrow.png"
+                            width="10px"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!------------ left-sidebar ------------>
+            <div class="left-sidebar">
+                <div class="imp-links">
+                    <a href="#"><img src="images/news.png"> Latest News</a>
+                    <a href="#"><img src="images/friends.png"> Friends</a>
+                    <a href="#"><img src="images/group.png"> Group</a>
+                    <a href="#"><img src="images/marketplace.png"> Marketplace</a>
+                    <a href="#"><img src="images/watch.png"> Watch</a>
+                    <a href="#">See More</a>
+                </div>
+                <div class="shortcut-links">
+                    <p>Your Shortcuts</p>
+                    <a href="#"><img src="images/shortcut-1.png">Web Developers</a>
+                    <a href="#"><img src="images/shortcut-2.png">Web Design Course</a>
+                    <a href="#"><img src="images/shortcut-3.png">Full Stack Development</a>
+                    <a href="#"><img src="images/shortcut-4.png">Website Experts</a>
+                </div>
+            </div>
+
+            <!-- ------------- main-content----------- -->
+            <div class="main-content">
+                <div class="story-gallery">
+                    <div class="story story1">
+                        <img src="images/upload.png">
+                        <p>Post Story</p>
+                    </div>
+                    <div class="story story2">
+                        <img src="images/member-1.png">
+                        <p>Camila Mina</p>
+                    </div>
+                    <div class="story story3">
+                        <img src="images/member-2.png">
+                        <p>Jackson Marko</p>
+                    </div>
+                    <div class="story story4">
+                        <img src="images/member-3.png">
+                        <p>Luciana Rose</p>
+                    </div>
+                    <div class="story story5">
+                        <img src="images/member-4.png">
+                        <p>John Doe</p>
+                    </div>
+                </div>
+
+                <!-- Write Post Form with File Upload -->
+                <div class="write-post-container">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                            <small>Public <i class="fa-solid fa-caret-down"></i></small>
+                        </div>
+                    </div>
+                    <form id="post-form">
+                        <div class="post-input-container">
+                            <textarea id="post-text" rows="3" placeholder="What's on your mind?"></textarea>
+                            <input type="file" id="media-file" accept="image/*,video/*">
+                            <button type="submit">Post</button>
+                            <div class="add-post-links">
+                                <a href="#"><img src="images/live-video.png">Live Video</a>
+                                <a href="#"><img src="images/photo.png">Photo/Video</a>
+                                <a href="#"><img src="images/feeling.png">Feeling/Activity</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Existing posts remain unchanged below -->
+                <!-- ------------post1----------- -->
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="images/profile-pic.png">
+                            <div>
+                                <p>Mahesh Singha</p>
+                                <span>May 27 2023, 13:40 pm </span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                    </div>
+                    <p class="post-text">Subscribe <span>@Easy Tutorials</span> Youtube channel to watch more videos
+                        on website Development and UI designs.
+                        <a href="#">#EasyTutorials</a>
+                        <a href="#">#YouTubeChannel</a>
+                    </p>
+                    <img src="images/feed-image-1.png" class="post-img" >
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <div><img src="images/like.png">130</div>
+                            <div><img src="images/comments.png">115</div>
+                            <div><img src="images/share.png">10</div>
+                        </div>
+                        <div class="post-profile-icons">
+                            <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- ... (other posts unchanged) ... -->
+                <button type="button" class="load-more-btn">Load More</button>
+            </div>
+            <!------------ right-sidebar------------- -->
+            <div class="right-sidebar">
+                <div class="sidebar-title">
+                    <h4>Events</h4>
+                    <a href="#">See All</a>
+                </div>
+                <div class="event">
+                    <div class="left-event">
+                        <h3>18</h3>
+                        <span>March</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Social Media</h4>
+                        <p><i class="fa-solid fa-location-dot"></i>Willson Tech Park</p>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="left-event">
+                        <h3>26</h3>
+                        <span>July</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Mobile Marketing</h4>
+                        <p><i class="fa-solid fa-location-dot"></i>Jurassic Tech Park</p>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+                <div class="sidebar-title">
+                    <h4>Advertisement</h4>
+                    <a href="#">Close</a>
+                </div>
+                <img src="images/advertisement.png" class = "sidebar-ads">
+                <div class="sidebar-title">
+                    <h4>Conversation</h4>
+                    <a href="#">Hide Chat</a>
+                </div>
+                <div class="onlile-list">
+                    <div class="online">
+                        <img src="images/member-1.png">
+                    </div>
+                    <p>Camila Mina</p>
+                </div>
+                <div class="onlile-list">
+                    <div class="online">
+                        <img src="images/member-2.png">
+                    </div>
+                    <p>Jackson Marko</p>
+                </div>
+                <div class="onlile-list">
+                    <div class="online">
+                        <img src="images/member-3.png">
+                    </div>
+                    <p>Luciana Rose</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>CopyRight @Mahesh of 2024 </p>
+        </div>
+    </div>
+
+    <!-- Appwrite SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.0"></script>
+    <script>
+    // ==== Appwrite Setup ====
+    const client = new Appwrite.Client();
+    client
+        .setEndpoint('https://cloud.appwrite.io/v1')
+        .setProject('683a58320034aaa69c07'); // Your Project ID
+
+    const account = new Appwrite.Account(client);
+    const storage = new Appwrite.Storage(client);
+
+    // ==== UI Elements ====
+    const authSection = document.getElementById('auth-section');
+    const signupBox = document.getElementById('signup-box');
+    const loginBox = document.getElementById('login-box');
+    const mainApp = document.getElementById('main-app');
+    const showLogin = document.getElementById('show-login');
+    const showSignup = document.getElementById('show-signup');
+    const signupForm = document.getElementById('signup-form');
+    const loginForm = document.getElementById('login-form');
+    const signupMsg = document.getElementById('signup-message');
+    const loginMsg = document.getElementById('login-message');
+    const logoutLink = document.getElementById('logout-link');
+
+    // ==== Auth Form Toggle ====
+    showLogin.onclick = (e) => {
+        e.preventDefault();
+        signupBox.style.display = 'none';
+        loginBox.style.display = '';
+    };
+    showSignup.onclick = (e) => {
+        e.preventDefault();
+        loginBox.style.display = 'none';
+        signupBox.style.display = '';
+    };
+
+    // ==== Signup Handler ====
+    signupForm.onsubmit = async (e) => {
+        e.preventDefault();
+        signupMsg.textContent = '';
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+        const name = document.getElementById('signup-name').value;
+        try {
+            await account.create(Appwrite.ID.unique(), email, password, name);
+            // Auto-login after signup
+            await account.createEmailSession(email, password);
+            showMainApp();
+        } catch (err) {
+            signupMsg.textContent = err.message || 'Signup failed';
+        }
+    };
+
+    // ==== Login Handler ====
+    loginForm.onsubmit = async (e) => {
+        e.preventDefault();
+        loginMsg.textContent = '';
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        try {
+            await account.createEmailSession(email, password);
+            showMainApp();
+        } catch (err) {
+            loginMsg.textContent = err.message || 'Login failed';
+        }
+    };
+
+    // ==== Logout Handler ====
+    if (logoutLink) {
+        logoutLink.onclick = async (e) => {
+            e.preventDefault();
+            try {
+                await account.deleteSession('current');
+                showMainApp();
+            } catch (err) {
+                alert('Logout failed');
+            }
+        };
+    }
+
+    // ==== Show Main App if Logged In ====
+    async function showMainApp() {
+        try {
+            const user = await account.get();
+            authSection.style.display = 'none';
+            mainApp.style.display = '';
+        } catch {
+            authSection.style.display = '';
+            mainApp.style.display = 'none';
+        }
+    }
+
+    // ==== On Page Load, Check Session ====
+    showMainApp();
+
+    // ==== Post Form Logic (Image/Video Upload) ====
+    // Replace with your actual Appwrite bucket ID
+    const BUCKET_ID = '683a5a440022d4e5bcff'; // <-- CHANGE THIS to your bucket's ID from Appwrite Console
+
+    const postForm = document.getElementById('post-form');
+    const postText = document.getElementById('post-text');
+    const mediaFile = document.getElementById('media-file');
+
+    if (postForm) {
+        postForm.onsubmit = async (e) => {
+            e.preventDefault();
+
+            const file = mediaFile.files[0];
+            const text = postText.value;
+
+            if (!file && !text) {
+                alert('Please enter text or select a file.');
+                return;
+            }
+
+            let fileId = null;
+            let fileUrl = null;
+
+            if (file) {
+                try {
+                    // Upload file to Appwrite Storage
+                    const uploadedFile = await storage.createFile(
+                        BUCKET_ID,
+                        Appwrite.ID.unique(),
+                        file
+                    );
+                    fileId = uploadedFile.$id;
+                    // Get a preview URL for the file
+                    fileUrl = storage.getFilePreview(BUCKET_ID, fileId).href;
+                } catch (err) {
+                    alert('File upload failed: ' + err.message);
+                    return;
+                }
+            }
+
+            // Show new post at the top of the feed
+            let feed = document.querySelector('.main-content');
+            let newPost = document.createElement('div');
+            newPost.className = 'post-container';
+            newPost.innerHTML = `
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>You</p>
+                            <span>${new Date().toLocaleString()}</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="post-text">${text}</p>
+                ${fileUrl ? (file.type.startsWith('video') ?
+                    `<video controls width="100%"><source src="${fileUrl}" type="${file.type}"></video>` :
+                    `<img src="${fileUrl}" class="post-img">`) : ''}
+            `;
+            feed.prepend(newPost);
+
+            // Reset form
+            postText.value = '';
+            mediaFile.value = '';
+        };
+    }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

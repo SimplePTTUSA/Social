@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page - SocialBook</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b87f2ffcd2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="images/logo.png" class="logo">
+            </a>
+                <ul>
+                    <li> <img src="images/notification.png"></li>
+                    <li> <img src="images/inbox.png"></li>
+                    <li> <img src="images/video.png"></li>
+                </ul>
+        </div>
+
+
+        <div class="nav-right">
+
+            <div class="search-box">
+                <img src="images/search.png" >
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="images/user.png">
+            </div>
+
+
+        </div>
+
+        <!-- ----------settings-menu---------- -->
+        <div class="settings-menu">
+
+            <div id="dark-btn">
+                <span></span>
+            </div>
+
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Mahesh Singha</p>
+                       <a href="profile.html">See Your Profile</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="user-profile">
+                    <img src="images/feedback.png">
+                    <div>
+                        <p>Give Feedback</p>
+                       <a href="#">Help us to improve the new design </a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="setting-links">
+                    <img src="images/setting.png" class="settings-icon">
+                    <a href="#">Settings & Privacy <img src="images/arrow.png"
+                        width="10px"></a>
+                </div>
+
+                <div class="setting-links">
+                    <img src="images/help.png" class="settings-icon">
+                    <a href="#">Help & Support <img src="images/arrow.png"
+                        width="10px"></a>
+                </div>
+
+                <div class="setting-links">
+                    <img src="images/display.png" class="settings-icon">
+                    <a href="#">Display & Accessibility <img src="images/arrow.png"
+                        width="10px"></a>
+                </div>
+
+                <div class="setting-links">
+                    <img src="images/logout.png" class="settings-icon">
+                    <a href="#">LogOut <img src="images/arrow.png"
+                        width="10px"></a>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </nav>
+
+    <!-- --------Profile Page ------------ -->
+    
+
+    <div class="profile-container">
+        <img src="images/cover.png" class="cover-img">
+        <div class="profile-details">
+
+            <div class="pd-left">
+                <div class="pd-row">
+                    <img src="images/user.png" class="pd-image">
+                    <div>
+                        <h3>Mahesh Singha</h3>
+                        <p>3546 Friends - 140 mutual</p>
+                        <img src="images/member-1.png">
+                        <img src="images/member-2.png">
+                        <img src="images/member-3.png">
+                        <img src="images/member-4.png">
+        
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="pd-right">
+
+                <button type="button"><img src="images/add-friends.png"> Friend</button>
+                <button type="button"><img src="images/message.png">Messege</button>
+                <a href=""><img src="images/more.png"></a>
+
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <div class="info-col">
+
+                <div class="profile-intro">
+                    <h3>Intro</h3>
+                    <p class="intro-text">"It takes courage to grow up and become who you really are."
+                        <img src="images/feeling.png">
+                    </p>
+                    <hr>
+                    <ul>
+                        <li><img src="images/profile-job.png">Works in Web Development</li>
+                        <li><img src="images/profile-study.png">Studeid at RKMGEC</li>
+                        <li><img src="images/profile-study.png">Went to Sudarsanpur DPU Vidyachakra</li>
+                        <li><img src="images/profile-study.png">Went to Tithpukur High School</li>
+                        <li><img src="images/profile-home.png">Lives in Raiganj, West Bengal</li>
+                        <li><img src="images/profile-location.png">From Kolkata, India</li>
+                    </ul>
+                </div>
+
+                <div class="profile-intro">
+                    <div class="title-box">
+                        <h3>Photos</h3>
+                        <a href="">All Photos</a>
+                    </div>
+                    <div class="photo-box">
+                        <div><img src="images/photo1.png"></div>
+                        <div><img src="images/photo3.png"></div>
+                        <div><img src="images/photo2.png"></div>
+                        <div><img src="images/photo5.png"></div>
+                        <div><img src="images/photo4.png"></div>
+                        <div><img src="images/photo6.png"></div>
+                    </div>
+                </div>
+
+                <div class="profile-intro">
+                    <div class="title-box">
+                        <h3>Friends</h3>
+                        <a href="">All Friends</a>
+                    </div>
+                    <p>3546 (140 mutual)</p>
+                    <div class="friends-box">
+                        <div><img src="images/member-1.png"><p>Camila Mina</p></div>
+                        <div><img src="images/member-2.png"><p>Jackson Marko</p></div>
+                        <div><img src="images/member-3.png"><p>Lusiana Rose</p></div>
+                        <div><img src="images/member-5.png"><p>Antony E</p></div>
+                        <div><img src="images/member-4.png"><p>Francis Lui</p></div>
+                        <div><img src="images/member-6.png"><p>Sofia </p></div>
+                        <div><img src="images/member-7.png"><p>Edward M</p></div>
+                        <div><img src="images/member-8.png"><p>Natasa </p></div>
+                        <div><img src="images/member-9.png"><p>James Doe</p></div>
+                        
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <div class="post-col">
+                <div class="write-post-container">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                            <small>Public <i class="fa-solid fa-caret-down"></i></small>
+                        </div>
+                    </div>
+    
+                    <div class="post-input-container">
+                        <textarea rows="3" placeholder="What's on your mind Mahesh?"></textarea>
+                        <div class="add-post-links">
+                            <a href="#"><img src="images/live-video.png">Live Video</a>
+                            <a href="#"><img src="images/photo.png">Photo/Video</a>
+                            <a href="#"><img src="images/feeling.png">Feeling/Activity</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------post1----------- -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                            <span>May 27 2023, 13:40 pm </span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Subscribe <span>@Easy Tutorials</span> Youtube channel to watch more videos
+                    on website Development and UI designs.
+                    <a href="#">#EasyTutorials</a>
+                    <a href="#">#YouTubeChannel</a>
+                </p>
+                <img src="images/feed-image-1.png" class="post-img" >
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png">130</div>
+                        <div><img src="images/comments.png">115</div>
+                        <div><img src="images/share.png">10</div>
+
+                    </div>
+                    <div class="post-profile-icons">
+                        <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- -------------post2----------- -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                            <span>Dec 27 2023, 15:40 pm </span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Today Enjoying With Friends <span>@Friends</span> Best moment  <a href="#">#Friends</a>
+                    <a href="#">#Party</a>
+                </p>
+                <img src="images/feed-image-2.png" class="post-img" >
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-blue.png">270</div>
+                        <div><img src="images/comments.png">135</div>
+                        <div><img src="images/share.png">27</div>
+
+                    </div>
+                    <div class="post-profile-icons">
+                        <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------post3--------- -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                            <span>Jan 15 2024, 1:15 pm </span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Funday <span>@Fun with friends</span> <a href="#">#Friends</a>
+                    <a href="#">#Relaxing</a>
+                    <a href="#">#Chill Mood</a>
+                </p>
+                <img src="images/feed-image-3.png" class="post-img" >
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-blue.png">215</div>
+                        <div><img src="images/comments.png">127</div>
+                        <div><img src="images/share.png">18</div>
+
+                    </div>
+                    <div class="post-profile-icons">
+                        <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------post4--------------- -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                            <span>May 27 2023, 15:40 pm </span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Subscribe <span>@Easy Tutorials</span> Youtube channel to watch more videos
+                    on website Development and Graphic designs.
+                    <a href="#">#EasyTutorials</a>
+                    <a href="#">#YouTubeChannel</a>
+                </p>
+                <img src="images/feed-image-4.png" class="post-img" >
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like-blue.png">140</div>
+                        <div><img src="images/comments.png">115</div>
+                        <div><img src="images/share.png">10</div>
+
+                    </div>
+                    <div class="post-profile-icons">
+                        <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------post5----------- -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>Mahesh Singha</p>
+                            <span>March 27 2024, 11:40 am </span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+                </div>
+                
+                <p class="post-text">Meeting Time <a href="#">#Busy</a>
+                    <a href="#">#Planning</a>
+                </p>
+                <img src="images/feed-image-5.png" class="post-img" >
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="images/like.png">113</div>
+                        <div><img src="images/comments.png">15</div>
+                        <div><img src="images/share.png">12</div>
+
+                    </div>
+                    <div class="post-profile-icons">
+                        <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+<div class="footer">
+    <p>CopyRight @Mahesh of 2024 </p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
